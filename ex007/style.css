@@ -71,6 +71,7 @@
 .internaModal #texto p{
     text-align: justify;
     margin-bottom: 1em;
+    width: 90%;
 }
 
 /*Links*/
@@ -86,6 +87,7 @@
     display: flex;
     list-style-type: none;
 }
+/*
 .internaModal #links ul li{
     display: flex;
     flex-direction: column;
@@ -97,18 +99,24 @@
     height: 40px;
     border-radius: 5px;
 }
+*/
 .internaModal #links ul li a{
     text-decoration: none;
     color: white;
     font-size: 1.2em;
+    background-color: #504c4c;
+    padding: 10px 20px 10px 20px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 5px;
 }
 
 
 @media (min-width: 600px){
     .internaModal{
         background-color: #b8d6da;
+        width: 80%;
         height: 70%;
-        min-height: 500px;
+        min-height: 700px;
     }
     .internaModal #video{
         height: 40%;
