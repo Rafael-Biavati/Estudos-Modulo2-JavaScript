@@ -27,9 +27,13 @@
     min-width: 360px;
     height: 80%;
     min-height: 700px;
+    
+
     margin: auto;
     border-radius: 10px;
     padding: 10px;
+    overflow-y: auto;
+    
 }
 
 /*Fechar*/
@@ -88,19 +92,7 @@
     display: flex;
     list-style-type: none;
 }
-/*
-.internaModal #links ul li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 20px 0px 20px;
-    background-color: rgb(80, 76, 76);
-    width: 90px;
-    height: 40px;
-    border-radius: 5px;
-}
-*/
+
 .internaModal #links ul li a{
     text-decoration: none;
     color: white;
@@ -117,7 +109,6 @@
         background-color: #b8d6da;
         width: 80%;
         height: 70%;
-        min-height: 700px;
     }
     .internaModal #video{
         height: 40%;
