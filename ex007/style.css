@@ -8,7 +8,7 @@
 }
 
 .baseModal{
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 1; 
     left: 0;
@@ -36,14 +36,15 @@
 }
 
 /*Fechar*/
-#fechar{
+.fechar{
     display: flex;
     justify-content: end;
     height: 5%;
     padding-right: 10px;
 }
-#fechar span{
+.fechar span{
     font-size: 2em;
+    cursor: pointer;
 }
 
 /*video*/
