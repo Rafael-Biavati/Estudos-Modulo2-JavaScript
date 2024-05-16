@@ -4,6 +4,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
 .baseModal{
@@ -21,10 +22,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: #181818;
+    color: #828282;
     width: 90%;
     min-width: 360px;
-    height: 80%;
+    height: 70%;
     min-height: 700px;
     margin: auto;
     border-radius: 10px;
@@ -38,6 +40,7 @@
     display: flex;
     justify-content: end;
     height: 5%;
+    padding-right: 10px;
 }
 #fechar span{
     font-size: 2em;
@@ -62,15 +65,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     width: 100%;
-    /*height: 50%;*/
     height: 65%;
-   
-
 }
 .internaModal #texto h2{
-    margin-top: .2em;
+    margin-top:20px;
     margin-bottom: 1em;
 }
 .internaModal #texto p{
@@ -85,40 +84,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
     width: 100%;
-    /*height: 15%;*/
     padding: 40px 0px 50px 0px;
-    
-    
-
-
- 
 }
 .internaModal #links ul{
     display: flex;
     list-style-type: none;
 }
-
-
-
-.internaModal #links ul li a{
+.internaModal #links ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.2em;
-    background-color: #504c4c;
-    padding: 10px 20px 10px 20px;
-    margin: 0px 10px 0px 10px;
-    border-radius: 5px;
-    
+    font-size: 1em;
+    background-color: #5e5e5e; 
+    padding: 8px 24px; 
+    margin: 0 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
+.internaModal #links ul li a:hover {
+    background-color: #3b3b3b; 
+    transform: translateY(-2px); 
+}
+
 
 
 @media (min-width: 600px){
     .internaModal{
-        background-color: #b8d6da;
         width: 90%;
-        height: 70%;
+        max-width: 850px;
     }
     .internaModal #video{
         height: 45%;
@@ -134,3 +128,24 @@
         width: 90%;
     }
 }
+
+@media (min-width: 850px){
+    .internaModal{ 
+        height: 70%;
+        max-width: 850px;
+    }
+    .internaModal #video{
+        height: 45%;
+    }
+    .internaModal #texto{
+        height: 50%;
+    }
+    .internaModal #video iframe{
+        width: 530px;
+        height: 290px;
+    }
+    .internaModal #texto p{
+        width: 90%;
+    }
+}
+
