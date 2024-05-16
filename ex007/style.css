@@ -42,6 +42,7 @@
 #fechar span{
     font-size: 2em;
 }
+
 /*video*/
 .internaModal #video{
     display: flex;
@@ -116,20 +117,18 @@
 @media (min-width: 600px){
     .internaModal{
         background-color: #b8d6da;
-        width: 80%;
+        width: 90%;
         height: 70%;
     }
     .internaModal #video{
-        height: 40%;
-    }
-    .internaModal #texto{
         height: 45%;
     }
-    .internaModal #links{
-        height: 10%;
+    .internaModal #texto{
+        height: 50%;
     }
     .internaModal #video iframe{
-        width: 360px
+        width: 460px;
+        height: 265px;
     }
     .internaModal #texto p{
         width: 90%;
