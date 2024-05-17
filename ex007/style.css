@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     background-color: #181818;
+
     color: #828282;
     width: 90%;
     min-width: 360px;
@@ -94,9 +95,9 @@
 }
 .internaModal #links ul li a {
     text-decoration: none;
-    color: white;
+    color: #cfd2d4;
     font-size: 1em;
-    background-color: #5e5e5e; 
+    background-color: #565d61; 
     padding: 8px 24px; 
     margin: 0 10px; 
     border-radius: 8px; 
@@ -104,7 +105,7 @@
     transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 .internaModal #links ul li a:hover {
-    background-color: #3b3b3b; 
+    background-color: #777a81; 
     transform: translateY(-2px); 
 }
 

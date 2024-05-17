@@ -1,0 +1,31 @@
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    font-size: 1.5em;
+    background-color: #323536; 
+    text-align: center;  
+    margin: 20px;
+    width: 250px;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Adiciona transições suaves */
+    filter: brightness(0.8); /* Aplica o sombreado inicial */
+}
+
+nav a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do quadrado */
+    background-color: #565a5c; /* Mantém a cor de fundo, caso mude */
+    filter: brightness(1); /* Remove o sombreado */
+}

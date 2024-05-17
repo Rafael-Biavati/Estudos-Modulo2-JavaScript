@@ -16,7 +16,7 @@ projeto1.addEventListener("click", function() {
 projeto2.addEventListener("click", function() {
     abrirModal(
         'Projeto Fotografo',
-        'Texto teste para projeto 2, alterando via parametro de função, teste teste teste teste teste Texto teste para projeto 2, alterando via parametro de função, teste teste teste teste teste Texto teste para projeto 2, alterando via parametro de função, teste teste teste teste teste',
+        'Texto teste para projeto 2, alterando via parametro de função, teste teste teste teste teste Texto teste para projeto 2, alterando via parametro de função, teste teste teste teste teste Texto teste para projeto 2, alterando via parametro de função, teste teste teste teste teste  teste teste teste teste teste  teste teste teste teste teste  teste teste teste teste teste  teste teste teste teste teste  teste teste teste teste teste  teste teste teste teste teste',
         '20/01/2020',
         'https://rafael-biavati.github.io/Estudo-Flexbox/projeto-flexbox/',
         'https://github.com/Rafael-Biavati/Estudo-Flexbox/tree/main/projeto-flexbox',
