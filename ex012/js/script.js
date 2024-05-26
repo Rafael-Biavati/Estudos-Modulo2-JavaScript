@@ -17,6 +17,7 @@ class Carro{
 const uno = new Carro("fiat","uno",2001);
 const celta = new Carro("chevrolet","celta",2012);
 
+
 console.log(uno)
 console.log(uno.marca)
 console.log(uno.modelo)
