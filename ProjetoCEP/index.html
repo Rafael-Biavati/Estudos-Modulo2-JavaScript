@@ -12,10 +12,16 @@
     </header>
     <main>
         <div id="caixaBusca">
-            <p>Colsultar CEP</p>
+            <p id="titulo">Colsultar CEP</p>
             <input type="text" name="cep" id="cep"> <br>
-            <input type="button" value="Buscar" id="btnCep">
+            <input type="button" value="Buscar" id="btnCep" onclick="buscarCep()">
+            <p id="result"></p>
+        </div>
+        <div id="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1157.5874211338853!2d-47.0623260056854!3d-22.909275206900382!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1716850224129!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
