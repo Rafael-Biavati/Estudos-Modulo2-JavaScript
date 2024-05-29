@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busca CEP</title>
+    <title>Encontre</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        #mapa {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="logo encontre">
+        <img src="logo02.png" alt="logo encontre">
     </header>
     <main>
         <div id="caixaBusca">
-            <p id="titulo">Colsultar CEP</p>
+            <p id="titulo">Consultar CEP</p>
             <input type="text" name="cep" id="cep"> <br>
-            <input type="button" value="Buscar" id="btnCep" onclick="buscarCep()">
+            <input type="button" value="Buscar" id="btnCep">
             <p id="result"></p>
         </div>
-        <div id="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1157.5874211338853!2d-47.0623260056854!3d-22.909275206900382!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1716850224129!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <div id="mapa"></div>
     </main>
 
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
