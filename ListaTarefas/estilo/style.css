@@ -1,37 +1,50 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1{text-align: center; font-size: 2.5em;}
-
-header{
-    display: flex;
-    flex-flow: row wrap;
-    width: 90%;
-    margin: auto auto;
-    align-items: center;
+body{
+    background-color: lightblue;
 }
 
-#tarefaTxt{
-    height: 120px;
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 30px;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    width: 60%;
+    margin: auto auto;
+    align-items: center;
+    min-width: 400px;
+    max-width: 800px;
+}
+
+#tarefaTxt {
+    height: 100px;
     font-size: 2em;
     width: 80%;
     padding-left: 10%;
+    border-radius: 10px 0px 0px 10px;
 }
-.add{
+
+.add {
     width: 20%;
     cursor: pointer;
-    background: green;
+    background: rgb(26, 141, 26);
     color: white;
     font-weight: bold;
     border: none;
-    height: 120px;
-    border-radius: 0px 10px 10px 0px ;
+    height: 100px;
+    border-radius: 0px 10px 10px 0px;
 }
-main{
+
+main {
     display: flex;
     flex-flow: row wrap;
     width: 90%;
@@ -39,49 +52,68 @@ main{
     padding-top: 40px;
 }
 
-.item{
+.item {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    margin: auto;
     background-color: white;
-    height: 80px;
+    height: 60px;
     width: 100%;
     box-shadow: 0 0 20px #00000062;
     margin-bottom: 2%;
     cursor: pointer;
+    border-radius: 10px;
+    min-width: 400px;
+    max-width: 1200px;
+    overflow: hidden; /* Para garantir que o conteúdo não ultrapasse os limites */
 }
 
-.item.check{
+.item.check {
     background: #b8e5ba;
+    border-radius: 10px;
 }
 
-.item.check .item-nome{
+.item.check .item-nome {
     text-decoration: line-through;
     color: gray;
 }
 
-.item-icone{
-    flex: 20%;
+.item-icone {
+    flex: 15%;
     text-align: center;
     font-size: 2em;
 }
-.item-nome{
-    flex: 55%;
+
+.item-nome {
+    flex: 65%;
     font-size: 20px;
     font-weight: bold;
+    white-space: nowrap; 
+    margin-right: 10px;
+    overflow-x: auto; /*rolagem horizontal*/
+    overflow-wrap: break-word;
 }
-.item-botao{
-    flex: 25%;
+
+.item-botao {
+    flex: 20%;
 }
-.delete{
-    background-color: red;
+
+.delete {
+    background-color: rgb(205, 65, 65);
     color: white;
     border: none;
     padding: 10px;
     height: 80px;
     width: 100%;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
 }
-.mdi-check-circle{
+
+.mdi-check-circle {
     color: green;
 }
+
+
+
