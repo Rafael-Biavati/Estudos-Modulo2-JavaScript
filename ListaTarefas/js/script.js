@@ -3,10 +3,10 @@ let input = document.getElementById("tarefaTxt");
 let btnAdd = document.getElementById("btn-add");
 let main = document.getElementById("areaLista");
 
-// Carregar tarefas do localStorage quando a página for carregada
-document.addEventListener("DOMContentLoaded", initialize);
+// Carregar tarefas do localStorage
+document.addEventListener("DOMContentLoaded", inicializar);
 
-// Adiciona uma nova tarefa à lista
+// Adiciona uma nova tarefa
 function addTarefa(text = "", completed = false) {
     let valorInput = text || input.value;
 
@@ -19,9 +19,9 @@ function addTarefa(text = "", completed = false) {
         };
         
         // Adicionar ao localStorage
-        let tarefas = loadFromLocalStorage();
+        let tarefas = carregarDoLocalStorage();
         tarefas.push(novaTarefa);
-        saveToLocalStorage(tarefas);
+        salvarNoLocalStorage(tarefas);
 
         renderTarefa(novaTarefa);
         
@@ -30,7 +30,7 @@ function addTarefa(text = "", completed = false) {
     }
 }
 
-// Renderiza uma tarefa na lista
+// Insere uma tarefa
 function renderTarefa(tarefa) {
     let itemClass = tarefa.completed ? "item check" : "item";
     let iconClass = tarefa.completed ? "mdi-check-circle" : "mdi-circle-outline";
@@ -65,41 +65,38 @@ function marcarTarefa(id) {
     }
 
     // Atualizar localStorage
-    let tarefas = loadFromLocalStorage();
+    let tarefas = carregarDoLocalStorage();
     tarefas = tarefas.map(tarefa => {
         if (tarefa.id === id) {
             tarefa.completed = !tarefa.completed;
         }
         return tarefa;
     });
-    saveToLocalStorage(tarefas);
+    salvarNoLocalStorage(tarefas);
 }
 
-// Remove uma tarefa da lista
+
 function deletar(id) {
     var tarefa = document.getElementById(id);
     tarefa.remove();
 
-    // Atualizar localStorage
-    let tarefas = loadFromLocalStorage();
+    let tarefas = carregarDoLocalStorage();
     tarefas = tarefas.filter(tarefa => tarefa.id !== id);
-    saveToLocalStorage(tarefas);
+    salvarNoLocalStorage(tarefas);
 }
 
-// Salva as tarefas no localStorage
-function saveToLocalStorage(tarefas) {
+function salvarNoLocalStorage(tarefas) {
     localStorage.setItem('tarefas', JSON.stringify(tarefas));
 }
 
-// Carrega as tarefas do localStorage
-function loadFromLocalStorage() {
+function carregarDoLocalStorage() {
     const tarefas = localStorage.getItem('tarefas');
     return tarefas ? JSON.parse(tarefas) : [];
 }
 
 // Inicializa a lista de tarefas carregando do localStorage
-function initialize() {
-    const tarefas = loadFromLocalStorage();
+function inicializar() {
+    const tarefas = carregarDoLocalStorage();
     tarefas.forEach(tarefa => {
         if (tarefa.id > count) {
             count = tarefa.id;
@@ -108,9 +105,8 @@ function initialize() {
     });
 }
 
-// Tecla Enter adiciona uma nova tarefa
 input.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
         btnAdd.click();
     }
-});
+})
